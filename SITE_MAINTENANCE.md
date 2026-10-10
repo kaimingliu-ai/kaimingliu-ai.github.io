@@ -56,7 +56,7 @@ npm run build
 npm run preview
 ```
 
-Run `npm run cv:build` before the site build whenever shared CV facts change. Homepage-only edits do not require regenerating or redesigning the CV. Review Home at 1440, 1280, 768, 390, and 320 px, including the professional row, project alignment, overflow, keyboard navigation, anchors, and contrast. If the CV changed, inspect both PDF pages. The build checks generated pages for headings, canonical URLs, absence of primary navigation and JavaScript, professional-link ordering, local links/fragments, the Research redirect, the font license, and identical CV copies. Commit the changed deliverables, then push to `main`. GitHub Actions deploys automatically. Check the workflow and live Home, legacy Research URL, and CV after deployment. `site` is the user-site origin `https://kl543.github.io`; do not add a repository base path.
+Run `npm run cv:build` before the site build whenever shared CV facts change. Homepage-only edits do not require regenerating or redesigning the CV. Review Home at 1440, 1280, 768, 390, and 320 px, including the professional row, project alignment, overflow, keyboard navigation, anchors, and contrast. If the CV changed, inspect both PDF pages. The build checks generated pages for headings, canonical URLs, absence of primary navigation and JavaScript, professional-link ordering, local links/fragments, the Research redirect, the font license, and identical CV copies. Commit the changed deliverables, then push to `main`. GitHub Actions deploys automatically. Check the workflow and live Home, legacy Research URL, and CV after deployment. `site` is the user-site origin `https://kaimingliu-ai.github.io`; do not add a repository base path.
 
 The old `/research/`, `/interests.html`, and `/projects.html` addresses redirect directly to `/#research` using static HTML refreshes with fallback links. `/contact.html` goes to `/#about`; `/coursework.html` goes to `/#background`. These redirects use `noindex` and do not duplicate project content. No individual Research detail routes existed when the single-page refactor began. Keep the stable homepage anchors `crystal-field`, `magnetic-scattering`, `neural-backflow`, and `background`; `education` is also retained. The original CV address `/assets/cv/Kaiming_Liu_CV.pdf` serves the current PDF. Keep these compatibility routes while external bookmarks may exist.
 
@@ -147,3 +147,20 @@ The deployed version before the single-page refactor is preserved at `checkpoint
 The deployed version before ML content positioning is preserved at `checkpoint/v6-before-ai-positioning-pass-20261002` (commit `42de57a`). All earlier archive and checkpoint references remain unchanged.
 
 The version before the final language refinement is preserved at `checkpoint/v7-before-clear-ai-language-pass-20261002` (commit `92e7907`). All earlier recovery references remain unchanged.
+
+## GitHub namespace and host migration
+
+The intended GitHub identity is `kaimingliu-ai`, with the existing user-site repository at `kaimingliu-ai/kaimingliu-ai.github.io`. Rename the existing account and repository in place; do not transfer them or create a replacement repository. The account rename must precede the user-site repository rename. Keep the repository public and Pages configured to use GitHub Actions. This user-site host needs no repository base path or `CNAME` file.
+
+The canonical source is `profile.website` in `src/data/profile.json`, with the same origin in `astro.config.mjs`. Profile metadata, Open Graph, professional links, and the generated sitemap follow that data. Also update `public/robots.txt`, the static compatibility pages, documentation, and both CV URL labels and link targets. The CV generator derives those labels from the profile URLs. Preserve all research/publication text, email, typography, assets, and stable anchors.
+
+After the account and repository rename succeeds, update this clone and verify the destination:
+
+```sh
+git remote set-url origin https://github.com/kaimingliu-ai/kaimingliu-ai.github.io.git
+git fetch origin --tags
+git remote -v
+git status --short --branch
+```
+
+The checkpoint `checkpoint/before-github-username-migration-20261009` preserves commit `a19cf1580e7cf2ee5ddbe39ff16f09f916d0b05e`. Keep it and all earlier archive/checkpoint refs. For a source rollback, use a normal revert or restoration commit. A source rollback does not undo an account/repository rename; retain canonical URLs matching the actual deployed host. Test the former Pages host separately from GitHub repository redirects, and record the observed results. Follow [SEARCH_CONSOLE_SETUP.md](SEARCH_CONSOLE_SETUP.md) for new-property verification and the limitations on redirects from the former username's host.

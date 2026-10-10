@@ -1,6 +1,6 @@
 # Kaiming Liu — academic website
 
-Source for [kl543.github.io](https://kl543.github.io/), a single-page researcher homepage built with Astro and plain CSS. Home contains the introduction, professional links, three research projects, publications, and background. No primary navbar, browser JavaScript, analytics, backend, or external font requests.
+Source for [kaimingliu-ai.github.io](https://kaimingliu-ai.github.io/), a single-page researcher homepage built with Astro and plain CSS. Home contains the introduction, professional links, three research projects, publications, and background. No primary navbar, browser JavaScript, analytics, backend, or external font requests.
 
 The introduction identifies the Physics PhD student, university and advisor, then explains the machine-learning research: predicting multiple plausible solutions and testing behavior from simulations to real measurements. Conditional density modeling and robust inverse prediction are the main methodological directions. Public method claims are checked against project evidence.
 
@@ -47,6 +47,8 @@ The deployed version before ML content positioning is preserved at `checkpoint/v
 
 The version before the final language refinement is preserved at `checkpoint/v7-before-clear-ai-language-pass-20261002` (`92e7907`). The refinement clarifies identity, replaces ambiguous terminology, and retains the website and CV visual systems.
 
+The production source before the GitHub namespace migration is preserved at `checkpoint/before-github-username-migration-20261009` (`a19cf15`). The target repository is [kaimingliu-ai/kaimingliu-ai.github.io](https://github.com/kaimingliu-ai/kaimingliu-ai.github.io), using the existing account and repository history. See [SITE_MAINTENANCE.md](SITE_MAINTENANCE.md) for namespace changes and recovery, and [SEARCH_CONSOLE_SETUP.md](SEARCH_CONSOLE_SETUP.md) for host-migration limitations.
+
 See [SITE_MAINTENANCE.md](SITE_MAINTENANCE.md) for content updates, publication, writing and talk workflows, CV maintenance, and privacy rules.
 
-The crawlable `robots.txt` advertises [sitemap.xml](https://kl543.github.io/sitemap.xml). See [SEARCH_CONSOLE_SETUP.md](SEARCH_CONSOLE_SETUP.md) for the owner's remaining manual verification and indexing steps.
+The crawlable `robots.txt` advertises [sitemap.xml](https://kaimingliu-ai.github.io/sitemap.xml). See [SEARCH_CONSOLE_SETUP.md](SEARCH_CONSOLE_SETUP.md) for the owner's remaining manual verification and indexing steps.
