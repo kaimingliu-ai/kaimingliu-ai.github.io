@@ -1,14 +1,28 @@
-# Google Search Console setup
+# Google Search Console status and monitoring
 
-Follow these steps after `https://kaimingliu-ai.github.io/` is live. The new host needs its own URL-prefix property; owning the former property does not verify the new one.
+The URL-prefix property is [https://kaimingliu-ai.github.io/](https://search.google.com/search-console?resource_id=https%3A%2F%2Fkaimingliu-ai.github.io%2F). The following results were observed in the official Search Console on October 10, 2026; they are a dated record, not a claim about future indexing status.
 
-1. Open [Google Search Console](https://search.google.com/search-console/) and sign in.
-2. Add a **URL-prefix** property for `https://kaimingliu-ai.github.io/`.
-3. Obtain the exact HTML verification file or HTML meta tag from Search Console. For the file method, put the downloaded file in `public/` without renaming or editing it, deploy, then click **Verify**. For the tag method, put Google's exact tag in the homepage `<head>` in `src/layouts/Page.astro`, deploy, then click **Verify**. Keep the verification file/tag afterward; do not invent a token.
-4. Use **URL Inspection** for `https://kaimingliu-ai.github.io/`, then **Test live URL**.
-5. Click **Request Indexing** for the homepage.
-6. Open **Sitemaps** and submit `sitemap.xml` for this property: `https://kaimingliu-ai.github.io/sitemap.xml`.
-7. Check **Page indexing**, **URL Inspection**, and **Settings → Crawl stats** later for crawl/indexing status or reported problems.
+| State | Confirmed result |
+| --- | --- |
+| Technically indexable | Homepage live test: **URL is available to Google** / **Page can be indexed**. Crawl allowed: Yes; page fetch: Successful; indexing allowed: Yes. User-declared canonical is the new homepage. One valid ProfilePage item was detected. |
+| Ownership verified | **Ownership verified**, using Google's downloaded HTML file. |
+| Sitemap submitted | **Sitemap submitted successfully** for `https://kaimingliu-ai.github.io/sitemap.xml`. The processing report initially showed **Couldn't fetch**, including after one diagnostic resubmission. A separate Google live test of the sitemap succeeded. Processing success remains unconfirmed. |
+| Indexing requested | **Indexing requested**; Google confirmed that the homepage was added to a priority crawl queue. One homepage request was made. |
+| Actually indexed | The Google Index inspection returned **URL is not on Google**, with **URL is unknown to Google** and no recorded crawl. A successful live test or indexing request does not establish actual indexing. |
+
+The exact downloaded verification file is committed at `public/googlec34e4b398265e454.html` and deployed at [its root URL](https://kaimingliu-ai.github.io/googlec34e4b398265e454.html). Keep its filename and bytes unchanged, and retain it in every deployment to preserve ownership. Do not add tracking scripts or generate replacement tokens. Search Console account details and private diagnostics are not stored in this repository.
+
+The homepage, robots, sitemap, and both CV download addresses returned HTTP 200. The sitemap is valid XML and contains the canonical homepage only. Public GitHub profile and repository homepage links point to the new website. No robots/noindex block, broken canonical, manual action, or security issue was found. The sitemap report's fetch failure has no identified repository-side cause: Google's own live test fetched the same URL successfully. Keep this processing issue separate from the confirmed sitemap submission and the successful homepage live test.
+
+## Lightweight follow-up
+
+1. Next check: **October 12, 2026**. Open the property above and inspect `https://kaimingliu-ai.github.io/`. Read the **Google Index** result, last crawl, indexing reason, and Google-selected canonical; record the date and result. Use this result to determine actual indexing, rather than relying solely on a `site:` query.
+2. Open **Sitemaps** and inspect the existing `/sitemap.xml` entry. Confirm its processing status, last read, and discovered pages. **Success** means the sitemap was fetched and read; it does not prove that its URLs are indexed. If the fetch error persists, inspect its details and live-test that exact URL, checking Crawl allowed and Page fetch. Fix only a demonstrated problem, then resubmit once if needed. Google retries failed sitemap fetches for a few days.
+3. Check **Pages** for the indexing reason and **Settings → Crawl stats** when data becomes available. Consult **Manual actions** and **Security issues** if a reported problem warrants it.
+4. If the homepage is still pending without a technical error, check again around **October 17**, then weekly while pending. Do not repeatedly request indexing for an unchanged homepage: repeated submissions do not improve queue priority. A further request is appropriate after a meaningful page change or correction of an actual indexing blocker.
+5. After future deployments, confirm that the verification file, homepage canonical, robots, sitemap, and CV still work. A new Google account must obtain and deploy its own official ownership proof; do not overwrite another owner's proof.
+
+These are follow-up instructions; no recurring automation has been scheduled. Google describes crawling as potentially taking days to weeks and does not guarantee indexing. See [URL Inspection](https://support.google.com/webmasters/answer/9012289), [Sitemaps report and fetch troubleshooting](https://support.google.com/webmasters/answer/7451001), [ownership verification](https://support.google.com/webmasters/answer/9008080), and [requesting a recrawl](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
 
 ## Migration from the former host
 

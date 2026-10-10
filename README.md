@@ -51,4 +51,4 @@ The production source before the GitHub namespace migration is preserved at `che
 
 See [SITE_MAINTENANCE.md](SITE_MAINTENANCE.md) for content updates, publication, writing and talk workflows, CV maintenance, and privacy rules.
 
-The crawlable `robots.txt` advertises [sitemap.xml](https://kaimingliu-ai.github.io/sitemap.xml). See [SEARCH_CONSOLE_SETUP.md](SEARCH_CONSOLE_SETUP.md) for the owner's remaining manual verification and indexing steps.
+The crawlable `robots.txt` advertises [sitemap.xml](https://kaimingliu-ai.github.io/sitemap.xml). Google's official HTML ownership file is deployed and must be retained. See [SEARCH_CONSOLE_SETUP.md](SEARCH_CONSOLE_SETUP.md) for the verified ownership, submission results, dated indexing status, and follow-up procedure.
