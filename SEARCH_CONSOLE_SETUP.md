@@ -8,7 +8,9 @@ The URL-prefix property is [https://kaimingliu-ai.github.io/](https://search.goo
 | Ownership verified | **Ownership verified**, using Google's downloaded HTML file. |
 | Sitemap submitted | **Sitemap submitted successfully** for `https://kaimingliu-ai.github.io/sitemap.xml`. The processing report initially showed **Couldn't fetch**, including after one diagnostic resubmission. A separate Google live test of the sitemap succeeded. Processing success remains unconfirmed. |
 | Indexing requested | **Indexing requested**; Google confirmed that the homepage was added to a priority crawl queue. One homepage request was made. |
-| Actually indexed | The Google Index inspection returned **URL is not on Google**, with **URL is unknown to Google** and no recorded crawl. A successful live test or indexing request does not establish actual indexing. |
+| Actually indexed | A subsequent **Google Index** inspection confirmed **URL is on Google** / **Page is indexed**. Last crawl was reported as October 10, 2026, 4:03:41 AM by **Googlebot smartphone**, with a successful fetch and indexing allowed. Google-selected canonical: **Inspected URL**, the new homepage. |
+
+The initial inspection showed **URL is unknown to Google** with no recorded crawl. The later indexed result above is the evidence for actual indexing; the successful live test and indexing request alone would not establish that result. Sitemap processing still reports **Couldn't fetch**, independently of the confirmed homepage indexing.
 
 The exact downloaded verification file is committed at `public/googlec34e4b398265e454.html` and deployed at [its root URL](https://kaimingliu-ai.github.io/googlec34e4b398265e454.html). Keep its filename and bytes unchanged, and retain it in every deployment to preserve ownership. Do not add tracking scripts or generate replacement tokens. Search Console account details and private diagnostics are not stored in this repository.
 
