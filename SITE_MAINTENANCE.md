@@ -150,7 +150,7 @@ The version before the final language refinement is preserved at `checkpoint/v7-
 
 ## GitHub namespace and host migration
 
-The intended GitHub identity is `kaimingliu-ai`, with the existing user-site repository at `kaimingliu-ai/kaimingliu-ai.github.io`. Rename the existing account and repository in place; do not transfer them or create a replacement repository. The account rename must precede the user-site repository rename. Keep the repository public and Pages configured to use GitHub Actions. This user-site host needs no repository base path or `CNAME` file.
+The GitHub identity is `kaimingliu-ai`, with the existing user-site repository at `kaimingliu-ai/kaimingliu-ai.github.io`. The account and repository were renamed in place on October 10, 2026, preserving their identifiers and repository history. For future migrations, rename the existing account and repository in place; do not transfer them or create a replacement repository. The account rename must precede the user-site repository rename. Keep the repository public and Pages configured to use GitHub Actions. This user-site host needs no repository base path or `CNAME` file.
 
 The canonical source is `profile.website` in `src/data/profile.json`, with the same origin in `astro.config.mjs`. Profile metadata, Open Graph, professional links, and the generated sitemap follow that data. Also update `public/robots.txt`, the static compatibility pages, documentation, and both CV URL labels and link targets. The CV generator derives those labels from the profile URLs. Preserve all research/publication text, email, typography, assets, and stable anchors.
 

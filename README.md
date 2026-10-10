@@ -47,7 +47,7 @@ The deployed version before ML content positioning is preserved at `checkpoint/v
 
 The version before the final language refinement is preserved at `checkpoint/v7-before-clear-ai-language-pass-20261002` (`92e7907`). The refinement clarifies identity, replaces ambiguous terminology, and retains the website and CV visual systems.
 
-The production source before the GitHub namespace migration is preserved at `checkpoint/before-github-username-migration-20261009` (`a19cf15`). The target repository is [kaimingliu-ai/kaimingliu-ai.github.io](https://github.com/kaimingliu-ai/kaimingliu-ai.github.io), using the existing account and repository history. See [SITE_MAINTENANCE.md](SITE_MAINTENANCE.md) for namespace changes and recovery, and [SEARCH_CONSOLE_SETUP.md](SEARCH_CONSOLE_SETUP.md) for host-migration limitations.
+The production source before the GitHub namespace migration is preserved at `checkpoint/before-github-username-migration-20261009` (`a19cf15`). The existing account and repository were renamed in place on October 10, 2026; the repository is now [kaimingliu-ai/kaimingliu-ai.github.io](https://github.com/kaimingliu-ai/kaimingliu-ai.github.io), with its history and recovery refs preserved. See [SITE_MAINTENANCE.md](SITE_MAINTENANCE.md) for namespace changes and recovery, and [SEARCH_CONSOLE_SETUP.md](SEARCH_CONSOLE_SETUP.md) for host-migration limitations.
 
 See [SITE_MAINTENANCE.md](SITE_MAINTENANCE.md) for content updates, publication, writing and talk workflows, CV maintenance, and privacy rules.
 
